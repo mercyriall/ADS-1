@@ -3,7 +3,7 @@ int cbinsearch(int *arr, int size, int value) {
     int R, L = 0, sum = 0, midl;
     R = size - 1;
     while(L < R){
-        midl = (R-L)/2;
+        midl = (R - L) / 2;
         if(arr[midl] == value){
             while(arr[midl - 1] == value){
                 sum++;
@@ -20,7 +20,7 @@ int cbinsearch(int *arr, int size, int value) {
             R = midl;
         }
         else{
-            L = midl +1;
+            L = midl + 1;
         }
     }
     return 0; // если ничего не найдено
