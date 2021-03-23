@@ -1,7 +1,7 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-    int R, L, sum, midl;
+    int R, L = 0, sum, midl;
     sum = 0;
     R = size - 1;
     while(L < R){
@@ -16,13 +16,14 @@ int cbinsearch(int *arr, int size, int value) {
                 midl++;
                 sum++;
             }
+            return sum;
         }
         if(arr[midl] > value){
             R = midl;
         }
         else{
-            L = midl;
+            L = midl +1;
         }
     }
-  return sum; // если ничего не найдено
+  return 0; // если ничего не найдено
 }
